@@ -1,0 +1,29 @@
+{#country_title#}
+{#country_items#}
+{#--img#}
+{#--title#}
+
+{% if options.country_items %}
+<section class="country">
+	<div class="container">
+		{% set title = {'title': options.country_title} %}
+		{% include 'title_h3.twig' with title %}
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<div class="country">
+					{% for item in options.country_items %}
+						<div class="item">
+							<div class="img">
+								<img src="{{ item.img.url }}" alt="{{ item.img.url }}">
+							</div>
+							<div class="title">
+								{{ item.title }}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endif %}

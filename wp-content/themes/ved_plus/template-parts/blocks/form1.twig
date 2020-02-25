@@ -1,0 +1,32 @@
+{#form1_title#}
+{#form1_subtitle#}
+{#form1_items#}
+{#-img#}
+{#-title#}
+{#-content#}
+<section class="form1">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+				<h3>{{ options.form1_title }}</h3>
+				<h4>{{ options.form1_subtitle }}</h4>
+				<div class="items">
+					{% for item in options.form1_items %}
+					<div class="item">
+						<div class="img">
+							<img src="{{ item.img.url }}" alt="{{ item.img.alt }}">
+						</div>
+						<h5>{{ item.title }}</h5>
+						<p>
+							{{ item.content }}
+						</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+				{{ function('do_shortcode','[contact-form-7 id="5" title="Какой груз везём"]') }}
+			</div>
+		</div>
+	</div>
+</section>

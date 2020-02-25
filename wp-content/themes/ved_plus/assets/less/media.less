@@ -1,0 +1,154 @@
+.main_nav{
+  .modal_menu{
+    svg{
+      display: none;
+    }
+  }
+}
+@media screen  and (max-width: 600px){
+  body{
+    overflow-x: hidden;
+    h3.title{
+      font-size: 28px;
+    }
+    h5.title{
+      font-size: 16px !important;
+    }
+  }
+  header{
+    .phones{
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+      .item{
+        margin: 5px 0;
+        text-align: center;
+      }
+    }
+    .addres{
+      margin-top: 10px;
+    }
+  }
+  .main_nav{
+    .wrapper{
+      flex-direction: column;
+      height:auto;
+      .modal_menu{
+        svg{
+          width: 40px;
+          height: 40px;
+          display: block;
+          color:rgba(255,255,255,.87);
+          fill: currentColor;
+          cursor: pointer;
+          border-radius:50%;
+          margin-bottom: 10px;
+          &:hover{
+            transition: 0.3s;
+            background-color: rgba(255,255,255,0.3);
+          }
+          &:active{
+            transition: 0.3s;
+            background-color: rgba(255,255,255,0.3);
+          }
+        }
+      }
+      nav{
+        flex-direction: column;
+        display: none ;
+        margin-bottom: 10px;
+        li{
+          margin: 10px 0 !important;
+        }
+      }
+    }
+
+  }
+
+  section.title{
+    padding-bottom: 0;
+    h1{
+      margin-top: 0;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    .button_wrapper{
+      flex-direction: column;
+      .button_white{
+        width: 80%;
+        margin: 10px auto;
+      }
+      .button_opacity{
+        width: 80%;
+        margin: 10px auto;
+      }
+    }
+  }
+
+  section.country{
+    padding-bottom: 20px;
+    .country{
+      padding: 0;
+    }
+    .item{
+      margin-bottom: 30px;
+    }
+  }
+
+  section#select{
+    padding-bottom: 20px;
+  }
+
+  section.cargo_type{
+    .item{
+      max-width: 100%;
+      .title_item{
+        flex-direction: column;
+        .title_content{
+          padding: 0;
+        }
+      }
+      .content{
+        table{
+          max-width: 100% !important;
+          width: 100% !important;
+          td{
+            max-width: 100% !important;
+            width: 100% !important;
+            display: flex;
+          }
+        }
+      }
+      .type{
+        flex-direction: column;
+      }
+    }
+  }
+
+  section.five_block{
+    .item{
+      position: static;
+      .img{
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        //max-height: auto;
+      }
+    }
+  }
+
+  section.step{
+    .item{
+      .step_btn{
+        position: static;
+      }
+    }
+  }
+
+  section.form1{
+    .items{
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

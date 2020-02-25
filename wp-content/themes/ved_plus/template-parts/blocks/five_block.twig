@@ -1,0 +1,22 @@
+{% if options.five_items %}
+	<section class="five_block">
+		<div class="container">
+			<div class="row">
+				{% for item in options.five_items %}
+					<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+						<div class="item item_{{ loop.index }}">
+							{% if loop.index ==2 and options.five_title %}
+								<h3>{{ options.five_title }}</h3>
+							{% endif %}
+							<div class="img">
+								<img src="{{ item.img.url }}" alt="{{ item.img.alt }}">
+							</div>
+							<h5>{{ item.title }}</h5>
+							<p>{{ item.content }}</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}

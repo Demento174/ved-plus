@@ -1,0 +1,31 @@
+<section class="team">
+    <div class="container">
+        {% include 'title_h3.twig'  %}
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="wrapper">
+                    {% for item in items %}
+                        <div class="item">
+                            <div class="imgs">
+                                <img src="{{ item.photo_main.url }}" alt="{{ item.photo_main.alt }}">
+                                <img src="{{ item.photo_second.url }}" alt="{{ item.photo_second.alt }}">
+                            </div>
+                            <h4 class="name">
+                                {{ item.Name }}
+                            </h4>
+                            <div class="position">
+                                {{ item.position }}
+                            </div>
+                            {% if item.email %}
+                            <div class="email">
+                                {{ item.email }}
+                            </div>
+                            {% endif %}
+
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+{#select_title#}
+{#select_items#}
+{#--img#}
+{#--content#}
+{% if options.select_items %}
+	<section class="select" id="select">
+		<div class="container">
+			{% set title = {'title':options.select_title} %}
+			{% include 'title_h3.twig' with title %}
+			<div class="row">
+				{% for item in options.select_items %}
+					<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+						<div class="item">
+							<div class="img">
+								<img src="{{ item.img.url }}" alt="{{ item.img.alt }}">
+							</div>
+							<div class="content">
+								{{ item.content }}
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}

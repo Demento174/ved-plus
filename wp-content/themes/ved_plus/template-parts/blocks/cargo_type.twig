@@ -1,0 +1,55 @@
+{#cargotype_title#}
+{#cargoType_subtitle#}
+{#cargo#}
+{#--title#}
+{#--img#}
+{#cargotype_items#}
+{#--title#}
+{#--subtitle#}
+{#--content#}
+{#--type {aircraft,car,train,sea}#}
+<section class="cargo_type" id="services">
+	<div class="container">
+		{% if options.cargotype_title %}
+		<div class="row">
+			<h3 class="title">{{ options.cargotype_title }}</h3>
+		</div>
+		{% endif %}
+		{% if options.cargoType_subtitle %}
+			<div class="row">
+				<h5 class="title">{{ options.cargoType_subtitle }}</h5>
+			</div>
+		{% endif %}
+		<div class="row">
+			{% for item in options.cargotype_items %}
+				<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+					<div class="item">
+						<div class="title_item">
+							<div class="title_img">
+								<img src="{{ item.icon.url }}" alt="{{ item.icon.alt }}">
+							</div>
+							<div class="title_content">
+								<h4>{{ item.title }}</h4>
+								<h5>{{ item.subtitle }}</h5>
+							</div>
+						</div>
+						<div class="content">
+							{{ item.content }}
+						</div>
+						<div class="type">
+							{% for type in item.type %}
+								<span>
+								<img src="{{ type.url }}" alt="{{ type.alt }}">
+								{{ type.title }}
+								</span>
+							{% endfor %}
+						</div>
+						<div class="btn_orange" data-target="#form1" data-toggle="modal">
+							Получить расчет, сроки и маршрут доставки
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

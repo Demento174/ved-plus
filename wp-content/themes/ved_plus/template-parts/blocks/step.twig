@@ -1,0 +1,28 @@
+{% if options.step_items %}
+	<section class="step" id="price">
+		<div class="container">
+			{% set title = {'title': options.step_title} %}
+			{% include 'title_h3.twig' with title %}
+			<div class="row">
+				{% for item in options.step_items %}
+				<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+					<div class="item">
+						<span class="step">
+						{{ item.step }} этап
+						</span>
+						<h5>{{ item.title }}</h5>
+						<div class="content">
+							{{ item.content }}
+						</div>
+						{% if item.btn %}
+							<div class="step_btn">
+								{{ item.btn }}
+							</div>
+						{% endif %}
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}

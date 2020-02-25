@@ -1,0 +1,27 @@
+@font-face{
+
+    font-family: 'ttnorms-bold';
+
+    src: url('./TTNorms-Bold.otf');
+}
+
+@font-face{
+
+    font-family: 'ttnorms-light';
+
+    src: url('./TTNorms-Light.otf');
+}
+
+@font-face{
+
+    font-family: 'ttnorms-medium';
+
+    src: url('./TTNorms-Medium.otf');
+}
+
+@font-face{
+
+    font-family: 'ttnorms-regular';
+
+    src: url('./TTNorms-Regular.otf');
+}

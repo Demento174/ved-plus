@@ -1,0 +1,29 @@
+<section class="map">
+	{{ options.footer_map }}
+	<div class="contacts">
+		<h3>Контакты</h3>
+		<span>{{ options.addres }}</span>
+		<span>Задайте нам вопрос по телефону</span>
+		{% for item in options.phones %}
+		<span class="weight"><a href="tel:{{ item.phone }}">{{ item.phone }}</a></span>
+		{% endfor %}
+		<span>{{ options.email }}</span>
+	</div>
+</section>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
+			<div class="col-sm-12 col-md-12 col-lg-10 col-xl-10">
+				<div class="content">
+					{{ options.footer_content }}
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-1 col-xl-1"></div>
+		</div>
+	</div>
+</footer>
+{{ function('wp_footer') }}
+{% include 'modal.twig' %}
+</body>
+</html>

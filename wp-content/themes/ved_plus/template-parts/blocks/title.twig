@@ -1,0 +1,32 @@
+<section class="title" style="background-image: url('{{ options.title_background.url }}')">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+				<h1>{{ options.h1 }}</h1>
+				<h2>{{ options.subtitle }}</h2>
+				<div class="button_wrapper">
+					<div class="button_white" data-target="#form2" data-toggle="modal">
+						Получить консультацию
+					</div>
+					<a class="button_opacity scroll" href="#select">
+						Я хочу знать о вас больше
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+				<div class="items">
+					{% for item in options.title_items %}
+						<div class="item">
+							<div class="img">
+								<img src="{{ item.img.url }}" alt="{{ item.img.alt }}">
+							</div>
+							<div class="content">
+								{{ item.content }}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

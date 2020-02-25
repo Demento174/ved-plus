@@ -1,0 +1,43 @@
+<!doctype html>
+	<html {{ function('language_attributes') }}>
+	<head>
+		<meta charset="{{ function('bloginfo','charset') }}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="yandex-verification" content="d7e8b396911628bf" />
+		<link rel="profile" href="https://gmpg.org/xfn/11" />
+		{{ function('wp_head') }}
+	</head>
+	
+	<body {{ function('body_class') }}>
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
+				<div class="logo_wrapper">
+					<div class="logo">
+						<img src="{{ options.logo.url }}" alt="{{ options.logo.alt }}">
+					</div>
+					<div class="logo_content">
+						{{ options.logo_content }}
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
+				<div class="phones">
+					{% for item in options.phones %}
+						<div class="item">
+							<a href="tel:{{ item.phone }}">{{ item.phone }}</a>
+							<span>{{ item.text }}</span>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+				<div class="addres">
+					{{ options.addres }}
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+{% include 'navigation.twig' %}

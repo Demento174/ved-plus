@@ -1,0 +1,40 @@
+<section class="carousel" id="about">
+	<div class="container">
+		{% set title = {'title':options.carousel_title} %}
+		{% include 'title_h3.twig' with title %}
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+				<div class="items owl-carousel owl-theme">
+					{% for item in options.carousel %}
+						<div class="item">
+							<div class="img">
+								<img src="{{ item.img.url }}" alt="{{ item.img.alt }}">
+							</div>
+							<div class="title">
+								{{ item.title }}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+				<div class="content">
+					<div class="row">
+						{% for item in options.carousel_items %}
+							<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+								<div class="content_item">
+									<div class="img">
+										<img src="{{ item.img.url }}" alt="{{ item.img.alt }}">
+									</div>
+									<p>
+										{{ item.content }}
+									</p>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
